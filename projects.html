@@ -22,6 +22,17 @@
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/highlightjs-9.12.0/textmate.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<link href="site_libs/anchor-sections-1.0/anchor-sections.css" rel="stylesheet" />
+<script src="site_libs/anchor-sections-1.0/anchor-sections.js"></script>
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
 
 <style type="text/css">code{white-space: pre;}</style>
 <style type="text/css">
@@ -299,6 +310,24 @@ $(document).ready(function () {
 
 
 <p>Here is a collection of projects I have worked on over the years!</p>
+<div id="willingness-to-pay" class="section level2">
+<h2><a href="Project3.html">Willingness To Pay</a></h2>
+<ul>
+<li>In this MATLAB livescript I use data from a conjoint analysis on streaming services to estimate customers willingness to pay for different services. A few of the services I calculate the willingness to pay for are commercials, more movies, more tv shows, and a fast forward feature. The data comes from a repeated survey used to estimate consumer preferences, then I use a mixed logit to estimate the probability that a respondant chooses a particular streaming plan. With these estimates we can calculate the willingness to pay for the services. Finally, I extend the model to calculate the willingness to pay for each individual in the survey by including random effects for some coefficients. This model is extremely useful for estimating demand and setting prices.</li>
+</ul>
+</div>
+<div id="estimating-unobserved-demand" class="section level2">
+<h2><a href="Project2.html">Estimating Unobserved Demand</a></h2>
+<ul>
+<li>In this MATLAB livescript I use data on wait times for rides at Disneyland to estimate unobserved demand for individual rides. To do this, I use structural equation modeling and maximum likelihood estimation. Using this information someone could identify the busiest times of day, and the busiest rides without directly observing how many people were there. We can extend the mo del to identify demand of individual groups, for example, suppose Disneyland faces three main customer groups, teenagers, nostalgic Disney fans, and families. After allowing the busiest hours to depend on each group we can estimate the unobserved demand for each ride, at each hour, for each group.</li>
+</ul>
+</div>
+<div id="teacher-value-added" class="section level2">
+<h2><a href="Project1.html">Teacher Value-Added</a></h2>
+<ul>
+<li>In this MATLAB livescript I estimate teacher specific effects on class mathscores using Data from Tennessee’s Student Teacher Achievement Ratio (STAR) project. Estimates of teacher value-added can be used to identify ‘superstar’ teachers as well as underperformers. Using maximum likelihood estimation I am able to obtain the parameters of the distribution of teachers performance. Using these parameters we can calculate an estimate of each individual teachers performance by plugging the parameters into the empirical bayes estimator. This method eliminates the overfitting problems commonly associated with using OLS and fixed effects.</li>
+</ul>
+</div>
 <div id="predicting-home-prices-in-king-county" class="section level2">
 <h2><a href="HomePricePred.html">Predicting Home Prices in King County</a></h2>
 <ul>
@@ -351,7 +380,7 @@ $(document).ready(function () {
 
 // add bootstrap table styles to pandoc tables
 function bootstrapStylePandocTables() {
-  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
 }
 $(document).ready(function () {
   bootstrapStylePandocTables();
